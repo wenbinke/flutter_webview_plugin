@@ -23,6 +23,8 @@ class WebviewScaffold extends StatefulWidget {
     this.primary = true,
     this.persistentFooterButtons,
     this.bottomNavigationBar,
+    this.bottomSheet,
+    this.floatingActionButton,
     this.withZoom,
     this.displayZoomControls,
     this.withLocalStorage,
@@ -56,6 +58,8 @@ class WebviewScaffold extends StatefulWidget {
   final bool primary;
   final List<Widget> persistentFooterButtons;
   final Widget bottomNavigationBar;
+  final Widget bottomSheet;
+  final Widget floatingActionButton;
   final bool withZoom;
   final bool displayZoomControls;
   final bool withLocalStorage;
@@ -149,6 +153,8 @@ class _WebviewScaffoldState extends State<WebviewScaffold> {
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       persistentFooterButtons: widget.persistentFooterButtons,
       bottomNavigationBar: widget.bottomNavigationBar,
+      bottomSheet: widget.bottomSheet,
+      floatingActionButton: widget.floatingActionButton,
       body: _WebviewPlaceholder(
         onRectChanged: (Rect value) {
           if (_rect == null) {
